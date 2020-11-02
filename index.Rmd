@@ -8,7 +8,7 @@ output:
 
 # This is Yutian's website
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+![](https://media.giphy.com/media/RG01kHJGpCAY8/giphy.gif)
 
 
 # Useful Links
@@ -23,13 +23,44 @@ output:
 [More about me](moreme.html)
 
 
+# My Experience
 
-# Loading Images
+A solution - driven data enthusiast. I am currently working on improving predictive modeling for ecommerce delivery platforms. It gives you precise information on how many days and hours an item will be sent to your home from individual shops online!
 
-This is me:
+Feel free to check out the company twitter:
+[Fenix Commerce AI](https://twitter.com/fenixcommerce?lang=en)
 
-<img src="images/BU.jpg" style="width:75%">
+I am also a researcher in topics about capital operations in the medical industry; 
+
+I Previously interned at RPB Energy, LLC, CITIC Investment Banking department, and D & R Subsea Engineering, LLC. 
   
+  
+# Projects{.tabset}
+
+
+## Economic consulting research
+
+
+## Causal Analysis of internal migration
+
+
+## Biomedical: IVD development
+
+
+## Data Science
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
