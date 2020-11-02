@@ -11,18 +11,6 @@ output:
 ![](https://media.giphy.com/media/RG01kHJGpCAY8/giphy.gif)
 
 
-# Useful Links
-
-[My LinkedIn](https://www.linkedin.com/in/nick-yutian-luo-b71749172)
-
-[My SquareSpace](https://www.nickluo1313/squarespace.com)
-
-
-# If you want to know more...
-
-[More about me](moreme.html)
-
-
 # My Experience
 
 A solution - driven data enthusiast. I am currently working on improving predictive modeling for ecommerce delivery platforms. It gives you precise information on how many days and hours an item will be sent to your home from individual shops online!
@@ -33,27 +21,44 @@ Feel free to check out the company twitter:
 I am also a researcher in topics about capital operations in the medical industry; 
 
 I Previously interned at RPB Energy, LLC, CITIC Investment Banking department, and D & R Subsea Engineering, LLC. 
-  
+
+I am a student @ 
+[Columbia University, stuying Biostatistics](https://www.publichealth.columbia.edu/people/current-students/academics/degree-requirements/ms-programs/theory-methods-track).
+
+
+# Useful Links
+
+[My LinkedIn](https://www.linkedin.com/in/nick-yutian-luo-b71749172)
+
+[My SquareSpace](https://www.nickluo1313/squarespace.com)
+
   
 # Projects{.tabset}
 
 
 ## Economic consulting research
 
+• Performed factorial ANOVA on R to indicate significant interactions for variables in SCED (generator safety constraint) model, confirmed a deviation in SCED algorithm in the 2019 Guangdong electricity real-time market pilot program and improved generator correct circuit breaker rate by 8%
+
 
 ## Causal Analysis of internal migration
+
+• Applied IV – overidentification regression and panel data model on internal migration data to identify instrumental variable’s robustness on causal relationship from housing price to internal migration in China during 1985 – 2010, established a model indicating housing price change can motivate internal migration influx
 
 
 ## Biomedical: IVD development
 
+• Assessed Vitro Diagnostic Reagents (IVD)’s interaction effects and analyzed improvement of accuracy after adjusting for baseline accuracy by ANCOVA with SAS proc glm script, validated the necessary assumptions to carry out the clinical experiment
+
 
 ## Data Science
 
+TBD
 
 
+# If you want to know more...
 
-
-
+[More about me](moreme.html)
 
 
 
