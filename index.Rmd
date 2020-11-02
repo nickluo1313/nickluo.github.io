@@ -1,12 +1,41 @@
 ---
-title: "My awesome website"
+title: "Nick (Yutian) Luo"
 output: 
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
-# This is Jeff's awesome website
+# This is Yutian's website
 
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+
+# Useful Links
+
+[My LinkedIn](https://www.linkedin.com/in/nick-yutian-luo-b71749172)
+
+[My SquareSpace](https://www.nickluo1313/squarespace.com)
+
+
+# If you want to know more...
+
+[More about me](moreme.html)
+
+
+
+# Loading Images
+
+This is me:
+
+<img src="images/BU.jpg" style="width:75%">
+  
+
+
+
+
+
+
+
+
+
