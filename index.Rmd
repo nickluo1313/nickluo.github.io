@@ -77,7 +77,7 @@ options(tz="North America/New York")
 
 
 
-```{r}
+```{r load data}
 data(rest_inspec)
 
 rest_inspec = 
@@ -144,6 +144,24 @@ plot_box2 =
 ```
 
 
+```{r barchart}
+
+# top 15 cuisines at boros outside manhattan
+rest_inspec %>% 
+  filter(boro == c("BRONX","STATEN ISLAND","BROOKLYN", "QUEENS")) %>% 
+  count(cuisine_description)%>% 
+  top_n(n = 15) %>% 
+  mutate(
+    cuisine_description = fct_reorder(cuisine_description, n)
+  ) %>%
+  plot_ly(
+    x = ~cuisine_description,
+    y = ~n,
+    color = ~cuisine_description,
+    type = "bar"
+  )
+
+```
 
 
 
