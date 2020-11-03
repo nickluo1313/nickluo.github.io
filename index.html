@@ -421,6 +421,17 @@ div.tocify {
 <h1>If you want to know more…</h1>
 <p><a href="moreme.html">More about me</a></p>
 </div>
+<div id="hw4-problem-2" class="section level1">
+<h1>hw4 problem 2</h1>
+<pre class="r"><code>data(rest_inspec)
+
+rest_inspec = 
+  rest_inspec %&gt;% 
+  filter(boro == &quot;BRONX&quot;) %&gt;% 
+  mutate(
+    camis = format(camis, scientific = F)
+  )</code></pre>
+</div>
 
 
 
