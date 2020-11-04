@@ -70,6 +70,7 @@ library(p8105.datasets)
 library(tidyverse)
 library(ggplot2)
 library(plotly)
+library(flexdashboard)
 
 options(scipen = 999)
 options(tz="North America/New York")

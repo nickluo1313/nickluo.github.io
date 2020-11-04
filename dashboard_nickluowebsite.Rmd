@@ -1,0 +1,125 @@
+---
+title: "dashboards"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+library(p8105.datasets)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+options(scipen = 999)
+options(tz="North America/New York")
+```
+
+
+```{r load data}
+data(rest_inspec)
+
+rest_inspec = 
+  rest_inspec %>% 
+  mutate(
+    camis = format(camis, scientific = F),
+    camis = as.integer(camis)
+  )
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r boxplot,}
+
+# # boxplot for the 5 boros' pizzas
+# plot_box1 =
+#   rest_inspec %>% 
+#   filter(cuisine_description == c("Pizza","Mexican","Chinese")) %>% 
+#   mutate(
+#     boro = fct_reorder(boro, score)
+#   ) %>% 
+#   plot_ly(
+#     y = ~ score,
+#     color = ~boro,
+#     type = "box"
+#   )
+
+# boxplot for the 7 common cuisines
+plot_box2 =
+  rest_inspec %>% 
+  filter(
+    inspection_date <= "2017/01/01",
+    cuisine_description == c("Bakery","Donuts","Pizza","Hotdogs","Mexican","Chinese","Hamburgers")
+  ) %>% 
+  mutate(
+    cuisine_description = fct_reorder(cuisine_description, score)
+  ) %>% 
+  plot_ly(
+    y = ~ score,
+    color = ~cuisine_description,
+    type = "box"
+  )
+
+```
+
+
+
+
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r barchart}
+
+# top 15 cuisines at boros outside manhattan
+rest_inspec %>% 
+  filter(boro == c("BRONX","STATEN ISLAND","BROOKLYN", "QUEENS")) %>% 
+  count(cuisine_description)%>% 
+  top_n(n = 15) %>% 
+  mutate(
+    cuisine_description = fct_reorder(cuisine_description, n)
+  ) %>%
+  plot_ly(
+    x = ~cuisine_description,
+    y = ~n,
+    color = ~cuisine_description,
+    type = "bar"
+  )
+
+```
+
+
+### Chart C
+
+```{r scatter plot}
+
+# for 2013 - 2016, scatter plot on date, score, and grades for all pizzas
+plot_scatter = 
+  rest_inspec %>% 
+  filter(cuisine_description == "Pizza") %>% 
+  filter(inspection_date <= "2016/01/01") %>% 
+  mutate(
+    text_label = str_c("borogh: ", boro)
+  ) %>% 
+  plot_ly(
+    x = ~inspection_date,
+    y = ~score,
+    color = ~grade,
+    type = "scatter",
+    text = ~text_label,
+    colors = "viridis"
+  )
+```
+
+
