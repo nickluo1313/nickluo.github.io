@@ -35,9 +35,9 @@ rest_inspec =
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Distribution for the 7 common food in New York
 
-```{r boxplot,}
+```{r boxplot}
 
 # # boxplot for the 5 boros' pizzas
 # plot_box1 =
@@ -53,8 +53,7 @@ Column {data-width=650}
 #   )
 
 # boxplot for the 7 common cuisines
-plot_box2 =
-  rest_inspec %>% 
+rest_inspec %>% 
   filter(
     inspection_date <= "2017/01/01",
     cuisine_description == c("Bakery","Donuts","Pizza","Hotdogs","Mexican","Chinese","Hamburgers")
@@ -65,7 +64,8 @@ plot_box2 =
   plot_ly(
     y = ~ score,
     color = ~cuisine_description,
-    type = "box"
+    type = "box",
+    colors = "viridis"
   )
 
 ```
@@ -78,7 +78,7 @@ plot_box2 =
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Top 15 Cuisines outside Manhattan
 
 ```{r barchart}
 
@@ -94,21 +94,23 @@ rest_inspec %>%
     x = ~cuisine_description,
     y = ~n,
     color = ~cuisine_description,
-    type = "bar"
-  )
+    type = "bar",
+    colors = "viridis"
+  ) %>% 
+  hide_legend()
 
 ```
 
 
-### Chart C
+### Scores by Inspection Date
 
 ```{r scatter plot}
 
 # for 2013 - 2016, scatter plot on date, score, and grades for all pizzas
-plot_scatter = 
-  rest_inspec %>% 
+
+rest_inspec %>% 
   filter(cuisine_description == "Pizza") %>% 
-  filter(inspection_date <= "2016/01/01") %>% 
+  filter(inspection_date <= "2017/01/01") %>% 
   mutate(
     text_label = str_c("borogh: ", boro)
   ) %>% 
@@ -120,6 +122,7 @@ plot_scatter =
     text = ~text_label,
     colors = "viridis"
   )
+
 ```
 
 
