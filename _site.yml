@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "About"
       href: about.html
+    - test: "dashboard"
+      href: dashboard_nickluowebiste.html
     - icon: fa-envelope fa-lg
       href: mailto:<yl4608@columbia.edu>
     - icon: fa-github fa-lg
