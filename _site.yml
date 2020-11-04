@@ -4,7 +4,7 @@ navbar:
   title: "Home"
   right:
     - text: "About"
-      href: about.html
+      href: moreme.html
     - test: "dashboard"
       href: dashboard_nickluowebiste.html
     - icon: fa-envelope fa-lg
